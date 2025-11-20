@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Company Data Input — CarbonTrack</title>
+  <link rel="stylesheet" href="input.css">
+</head>
+<body>
+  <header>
+    <div class="topbar">
+      <div class="brand">
+        <div class="logo">CT</div>
+        <h1>CarbonTracker </h1>
+      </div>
+
+      <nav>
+        <a href="cc.html">Home</a>
+        <a href="#">Dashboard</a>
+        <a href="#" >Data Input</a>
+        <a href="#">Analytics</a>
+        <a href="#">Settings</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="page-head">
+      <div>
+        <h2>Company Data Input</h2>
+        <div class="subtitle">Enter your company's carbon emissions and operational data</div>
+      </div>
+
+      <div class="progress-wrap" aria-hidden="false">
+        <div class="steps" id="progressSteps">
+          <div class="step completed" data-step="1">
+            <div class="circle">✓</div>
+            <div class="label">Company Info</div>
+          </div>
+
+          <div class="step current" data-step="2">
+            <div class="circle">2</div>
+            <div class="label">Emissions Data</div>
+          </div>
+
+          <div class="step" data-step="3">
+            <div class="circle">3</div>
+            <div class="label">Operations</div>
+          </div>
+
+          <div class="step" data-step="4">
+            <div class="circle">4</div>
+            <div class="label">Review</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid">
+      <!-- Form column -->
+      <div>
+        <form id="multiForm" class="card" onsubmit="return false">
+          <!-- Step 1: Company Info -->
+          <section class="section" data-step="1">
+            <div class="section-title"><div class="ico">🏢</div><div>Company Information</div></div>
+
+            <div class="row">
+              <div>
+                <label for="companyName">Company Name <span style="color:#e11">*</span></label>
+                <input id="companyName" name="companyName" required type="text" placeholder="Enter your company name">
+              </div>
+              <div>
+                <label for="industryType">Industry Type <span style="color:#e11">*</span></label>
+                <select id="industryType" name="industryType" required>
+                  <option value="">Select industry type</option>
+                  <option>Manufacturing</option>
+                  <option>IT / Services</option>
+                  <option>Retail</option>
+                  <option>Transport & Logistics</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row">
+              <div>
+                <label for="hq">Headquarters Location <span style="color:#e11">*</span></label>
+                <input id="hq" name="hq" required type="text" placeholder="City, Country">
+              </div>
+              <div>
+                <label for="employees">Employee Count <span style="color:#e11">*</span></label>
+                <input id="employees" name="employees" required type="number" min="0" placeholder="Total employees">
+              </div>
+            </div>
+          </section>
+
+          <!-- Step 2: Emissions Data -->
+          <section class="section" data-step="2" style="display:none">
+            <div class="section-title"><div class="ico">🌱</div><div>Emissions Data</div></div>
+
+            <div class="row">
+              <div>
+                <label for="energy">Energy Consumption (kWh)</label>
+                <input id="energy" name="energy" type="number" min="0" value="0">
+                <div class="hint">Monthly average or annual total</div>
+              </div>
+              <div>
+                <label for="renewable">Renewable Energy %</label>
+                <input id="renewable" name="renewable" type="number" min="0" max="100" value="0">
+                <div class="hint">0–100%</div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div>
+                <label for="transport">Transportation Emissions (kg CO₂)</label>
+                <input id="transport" name="transport" type="number" min="0" value="0">
+              </div>
+              <div>
+                <label for="waste">Waste Management (tons)</label>
+                <input id="waste" name="waste" type="number" min="0" value="0">
+              </div>
+            </div>
+
+            <div>
+              <label for="other">Other Emissions Sources</label>
+              <textarea id="other" name="other" placeholder="Describe any other significant emission sources..."></textarea>
+            </div>
+          </section>
+
+          <!-- Step 3: Operations -->
+          <section class="section" data-step="3" style="display:none">
+            <div class="section-title"><div class="ico">⚙️</div><div>Operations Details</div></div>
+
+            <div class="row">
+              <div>
+                <label for="facilities">Number of Facilities</label>
+                <input id="facilities" name="facilities" type="number" min="0" value="0">
+              </div>
+              <div>
+                <label for="production">Production Volume (units/year)</label>
+                <input id="production" name="production" type="number" min="0" value="0">
+              </div>
+            </div>
+
+            <div class="row">
+              <div>
+                <label for="hours">Average Operational Hours/Day</label>
+                <input id="hours" name="hours" type="number" min="0" value="8">
+              </div>
+              <div>
+                <label for="facilityType">Facility Type</label>
+                <select id="facilityType" name="facilityType">
+                  <option value="">Select facility type</option>
+                  <option>Factory</option>
+                  <option>Office</option>
+                  <option>Warehouse</option>
+                </select>
+              </div>
+            </div>
+          </section>
+
+          <!-- Step 4: Review -->
+          <section class="section" data-step="4" style="display:none">
+            <div class="section-title"><div class="ico">🔎</div><div>Review & Submit</div></div>
+
+            <div id="reviewArea" style="font-size:14px;color:#122;">Please review your entries and click Submit.</div>
+
+          </section>
+
+          <!-- Supporting Documents (always show) -->
+          <div class="section">
+            <div class="section-title"><div class="ico">📁</div><div>Supporting Documents</div></div>
+            <div class="upload-dash" id="uploadDash" title="Click to add files">
+              <div class="big">📤 Drag and drop files here or click to browse</div>
+              <div class="small">Accepted formats: PDF, Excel, CSV (Max 10MB each)</div>
+              <input id="fileInput" type="file" multiple accept=".pdf,.csv,.xls,.xlsx,image/*">
+            </div>
+          </div>
+
+          <div class="actions">
+            <button type="button" class="btn secondary" id="prevBtn">← Previous</button>
+            <button type="button" class="btn save" id="saveDraft">💾 Save Draft</button>
+            <button type="button" class="btn next" id="nextBtn">Next →</button>
+            <button type="button" class="btn submit" id="submitBtn">✓ Submit</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Help sidebar -->
+      <aside class="help">
+        <div class="card">
+          <div class="title" style="font-weight:700;margin-bottom:8px">Help & Guidelines</div>
+          <div class="box" id="helpBox">
+            <!-- content updated by JS -->
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <script src="input.js"></script>
+</body>
+</html>

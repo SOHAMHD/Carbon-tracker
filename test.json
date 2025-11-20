@@ -1,0 +1,161 @@
+{
+  "generatedAt": "2025-01-01T12:00:00.000Z",
+  "sites": [
+    {
+      "id": "site-1001",
+      "name": "Plant A — Manufacturing",
+      "metadata": {
+        "location": "Mumbai, India",
+        "reporting_period": "2024-01-01 to 2024-12-31",
+        "data_source": "Electricity invoice, diesel receipts, travel logs"
+      },
+      "primary": {
+        "diesel_l": 12000,
+        "petrol_l": 0,
+        "ng_m3": 4500,
+        "lpg_l": 0,
+        "generator_diesel_l": 1600,
+        "generator_hours": 140,
+        "company_km": 42000,
+        "electricity_kwh": 98000,
+        "renewable_kwh": 20000,
+        "process_CO2_t": 6.5,
+        "process_CH4_kg": 0,
+        "process_N2O_kg": 0,
+        "fugitive_CH4_kg": 8
+      },
+      "secondary": {
+        "flights_km": 14000,
+        "train_km": 1800,
+        "commute_km_emp": 10,
+        "commute_emp_count": 120,
+        "waste_kg_per_month": 380,
+        "water_m3_per_month": 260,
+        "transport_legs": [
+          { "mode": "truck", "distance_km": 350, "weight_tonnes": 10 },
+          { "mode": "sea", "distance_km": 1500, "weight_tonnes": 30 }
+        ]
+      },
+      "ef": {
+        "diesel_l": 2.68,
+        "petrol_l": 2.31,
+        "ng_m3": 2.02,
+        "lpg_l": 1.51,
+        "elec_kwh": 0.50,
+        "dh_kwh": 0.20,
+        "company_km": 0.192,
+        "flight_km": 0.115,
+        "train_km": 0.041,
+        "commute_km": 0.18,
+        "waste_kg": 0.21,
+        "water_m3": 0.344,
+        "truck_tkm": 0.05
+      }
+    },
+
+    {
+      "id": "site-1002",
+      "name": "Plant B — Assembly Unit",
+      "metadata": {
+        "location": "Pune, India",
+        "reporting_period": "2024-01-01 to 2024-12-31",
+        "data_source": "Utility meter readings, HR travel logs"
+      },
+      "primary": {
+        "diesel_l": 8500,
+        "petrol_l": 1200,
+        "ng_m3": 3000,
+        "lpg_l": 500,
+        "generator_diesel_l": 900,
+        "generator_hours": 90,
+        "company_km": 28000,
+        "electricity_kwh": 60000,
+        "renewable_kwh": 12000,
+        "process_CO2_t": 2.8,
+        "process_CH4_kg": 3,
+        "process_N2O_kg": 0,
+        "fugitive_CH4_kg": 5
+      },
+      "secondary": {
+        "flights_km": 7000,
+        "train_km": 3000,
+        "commute_km_emp": 8,
+        "commute_emp_count": 75,
+        "waste_kg_per_month": 240,
+        "water_m3_per_month": 150,
+        "transport_legs": [
+          { "mode": "truck", "distance_km": 200, "weight_tonnes": 6 },
+          { "mode": "air", "distance_km": 900, "weight_tonnes": 1.2 }
+        ]
+      },
+      "ef": {
+        "diesel_l": 2.68,
+        "petrol_l": 2.31,
+        "ng_m3": 2.02,
+        "lpg_l": 1.51,
+        "elec_kwh": 0.50,
+        "dh_kwh": 0.20,
+        "company_km": 0.192,
+        "flight_km": 0.115,
+        "train_km": 0.041,
+        "commute_km": 0.18,
+        "waste_kg": 0.21,
+        "water_m3": 0.344,
+        "truck_tkm": 0.05
+      }
+    },
+
+    {
+      "id": "site-1003",
+      "name": "Warehouse & Logistics Hub",
+      "metadata": {
+        "location": "Navi Mumbai, India",
+        "reporting_period": "2024-01-01 to 2024-12-31",
+        "data_source": "Freight manifests, warehouse utility bills"
+      },
+      "primary": {
+        "diesel_l": 1500,
+        "petrol_l": 3000,
+        "ng_m3": 0,
+        "lpg_l": 0,
+        "generator_diesel_l": 400,
+        "generator_hours": 60,
+        "company_km": 52000,
+        "electricity_kwh": 45000,
+        "renewable_kwh": 6000,
+        "process_CO2_t": 0,
+        "process_CH4_kg": 0,
+        "process_N2O_kg": 0,
+        "fugitive_CH4_kg": 2
+      },
+      "secondary": {
+        "flights_km": 2000,
+        "train_km": 4500,
+        "commute_km_emp": 15,
+        "commute_emp_count": 45,
+        "waste_kg_per_month": 120,
+        "water_m3_per_month": 80,
+        "transport_legs": [
+          { "mode": "truck", "distance_km": 800, "weight_tonnes": 12 },
+          { "mode": "rail", "distance_km": 600, "weight_tonnes": 20 },
+          { "mode": "truck", "distance_km": 50, "weight_tonnes": 3 }
+        ]
+      },
+      "ef": {
+        "diesel_l": 2.68,
+        "petrol_l": 2.31,
+        "ng_m3": 2.02,
+        "lpg_l": 1.51,
+        "elec_kwh": 0.50,
+        "dh_kwh": 0.20,
+        "company_km": 0.192,
+        "flight_km": 0.115,
+        "train_km": 0.041,
+        "commute_km": 0.18,
+        "waste_kg": 0.21,
+        "water_m3": 0.344,
+        "truck_tkm": 0.05
+      }
+    }
+  ]
+}

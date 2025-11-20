@@ -1,0 +1,209 @@
+/* --------- Global --------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: url('photos/Ист25-29.jpeg') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* --------- Header / Navbar --------- */
+/* ---------- Header / Navbar (drop-in) ---------- */
+.site-header {
+  width: 100%;
+  background: linear-gradient(90deg, #f1f9f8 0%, #eaf6ff 100%);
+  border-bottom: 1px solid rgba(10,20,30,0.06);
+  position: relative;
+  z-index: 100;
+}
+
+.site-header__inner{
+  max-width: 1200px;              /* match your page max width */
+  margin: 0 auto;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Brand */
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  flex-shrink: 0;                 /* don't let the brand shrink */
+}
+
+.brand__logo{
+  width: 44px;                    /* same size as your homepage logo */
+  height: 44px;
+  display: block;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.brand__title{
+  font-size: 20px;
+  font-weight: 700;
+  color: #0f2e4d;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* Nav */
+.site-nav {
+  /* allow horizontal scrolling on very small screens */
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.site-nav ul {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;            /* prevent wrapping */
+  flex-wrap: nowrap;              /* ensure items stay on one line */
+}
+
+.site-nav a {
+  display: inline-block;
+  padding: 6px 0;
+  color: rgba(8,15,25,0.85);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.site-nav a:hover {
+  color: #2f6fd5;
+}
+
+/* Small-screen: shrink spacing, show nice scroll */
+@media (max-width: 880px) {
+  .site-header__inner { padding: 10px 12px; gap: 12px; }
+  .brand__title { font-size: 18px; }
+  .site-nav ul { gap: 14px; padding-bottom: 4px; }
+}
+
+/* If you want nav to fit on one line on wide screens, allow it to grow */
+.site-nav { flex: 1 1 auto; display: block; }
+.site-nav ul { justify-content: flex-end; }
+
+nav a {
+  text-decoration: none;
+  color: rgba(10, 20, 30, 0.75);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #2f6fd5;
+}
+
+
+/* --------- Sign-in Card --------- */
+.sigin_content {
+  width: 400px;
+  margin-top: 60px;
+
+  padding: 35px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+
+  text-align: center;
+}
+
+/* Logo + Title inside Box */
+.sigin_content .brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.sigin_content .brand .logo {
+  width: 45px;
+  height: 45px;
+  font-size: 18px;
+}
+
+/* --------- Form --------- */
+.sigin_content form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.sigin_content label {
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #333;
+}
+
+.sigin_content input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+  transition: 0.2s;
+}
+
+.sigin_content input:focus {
+  border-color: #4a90e2;
+  outline: none;
+  box-shadow: 0 0 5px rgba(74, 144, 226, 0.4);
+}
+
+/* Submit Button */
+#submit {
+  padding: 12px;
+  background: #4a90e2;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 5px;
+  transition: 0.2s;
+}
+
+#submit:hover {
+  background: #357ab8;
+}
+
+/* Signup Text */
+.sigin_content p {
+  text-align: center;
+  margin-top: 15px;
+  color: #444;
+  font-size: 0.9rem;
+}
+
+.sigin_content a {
+  color: #2f6fd5;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.sigin_content a:hover {
+  text-decoration: underline;
+}
